@@ -1,0 +1,17 @@
+.DS_Store
+
+# Terraformのローカル状態ファイル
+*.tfstate
+*.tfstate.backup
+
+# Terraformのプランファイル
+*.tfplan
+
+# Terraformのロックファイル（リモートステートのロック情報）
+.terraform.lock.hcl
+
+# Terraformの作業ディレクトリ
+.terraform/
+
+# センシティブな環境変数ファイル
+*.tfvars
