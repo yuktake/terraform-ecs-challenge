@@ -3,7 +3,7 @@ data "aws_availability_zones" "current" {}
 
 module "vpc" {
   source  = "terraform-aws-modules/vpc/aws"
-  version = "5.19.0"
+  version = "5.0.0"
 
   name = "${var.stage}-vpc-tf"
   cidr = var.vpc_cidr

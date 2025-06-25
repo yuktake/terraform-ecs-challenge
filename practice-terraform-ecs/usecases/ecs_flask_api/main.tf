@@ -123,9 +123,9 @@ resource "aws_iam_role" "ecs_task_execution_role" {
 }
 
 # IAMロールにAWSマネージドポリシーをアタッチ
-resource "aws_iam_role_policy_attachments_exclusive" "ecs_task_execution_managed_policy" {
-  policy_arns = [data.aws_iam_policy.managed_ecs_task_execution.arn]
-  role_name   = aws_iam_role.ecs_task_execution_role.name
+resource "aws_iam_role_policy_attachment" "ecs_task_execution_managed_policy" {
+  policy_arn = data.aws_iam_policy.managed_ecs_task_execution.arn
+  role       = aws_iam_role.ecs_task_execution_role.name
 }
 
 # IAMロールにインラインポリシーをアタッチ
