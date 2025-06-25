@@ -81,7 +81,7 @@ data "aws_iam_policy_document" "ecs_task_execution" {
       data.aws_ssm_parameter.db_password.arn,
       data.aws_ssm_parameter.db_name.arn,
       # ここが怪しくて、depends_onでの対応が必要かも
-      aws_ssm_parameter.db_host.arn
+      data.aws_ssm_parameter.db_host.arn
     ]
   }
 }
